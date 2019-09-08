@@ -1,0 +1,20 @@
+schema {
+  query: Query
+}
+
+type Query {
+   autores: [Autor!]!
+   autor(id: String): Autor
+}
+
+type Autor {
+   id: String!
+   nome: String!
+   artigos: [Artigo!]!
+}
+
+type Artigo {
+  id: String!
+  titulo: String!
+  corpo: String!
+}
